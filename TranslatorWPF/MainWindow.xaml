@@ -8,8 +8,8 @@
         ResizeMode="NoResize"
         Title="Translator 0.1" Height="550" Width="450" Background="WhiteSmoke">
     <Grid HorizontalAlignment="Right" Width="444" >
-        <TextBlock HorizontalAlignment="Left" FontSize="14" Height="35" Margin="20,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="424"><Run Text="1. Sprawdź w jakim języku jest wprowadzony tekst."/><LineBreak/><Run/></TextBlock>
-        <TextBox Name="txtbCheckText" HorizontalAlignment="Left" Height="27" Margin="20,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="298"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="14" Height="35" Margin="20,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="424"><Run Text="1. Sprawdź język wprowadzonego tekstu."/><LineBreak/><Run/></TextBlock>
+        <TextBox Name="txtbCheckText" HorizontalAlignment="Left" Height="27" Margin="30,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="288"/>
         <Button Name="btnCheckText" Content="Sprawdź" HorizontalAlignment="Left" Margin="334,45,0,0" VerticalAlignment="Top" Width="91" Height="25" Background="Blue" Foreground="White" FontWeight="Bold"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="20,89,0,0" TextWrapping="Wrap" Text="Język wprowadzonego tekstu to: " VerticalAlignment="Top" Height="19" Width="224"/>
@@ -23,6 +23,22 @@
                 </TransformGroup>
             </GridSplitter.RenderTransform>
         </GridSplitter>
-        <TextBlock HorizontalAlignment="Left" FontSize="14" Margin="20,144,0,0" TextWrapping="Wrap" Text="2. Translator" VerticalAlignment="Top" Height="23" Width="358"/>
+
+        <TextBlock HorizontalAlignment="Left" FontSize="14" Margin="20,144,0,0" TextWrapping="Wrap" Text="2. Translator." VerticalAlignment="Top" Height="23" Width="358"/>
+        <TextBox Name="txtbTextToTranslate" HorizontalAlignment="Left" Height="116" Margin="30,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="395"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,174,0,0" TextWrapping="Wrap" Text="Tekst do przetłumaczenia:" VerticalAlignment="Top" Width="262"/>
+        <TextBox Name="txtbTextTranslated" HorizontalAlignment="Left" Height="116" Margin="30,356,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="395"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,340,0,0" TextWrapping="Wrap" Text="Tłumaczenie:" VerticalAlignment="Top" Width="262"/>
+        <Button Name="btnTranslate" Content="Translate" HorizontalAlignment="Left" Margin="334,311,0,0" VerticalAlignment="Top" Width="91" Height="25" Background="Blue" Foreground="White" FontWeight="Bold"/>
+        <ComboBox HorizontalAlignment="Left" Margin="198,314,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="English" IsSelected="True" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Polish" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Italian" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Spanish" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="French" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Russian" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="German" HorizontalAlignment="Left" Width="118"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="77,477,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Height="34" Width="301"><Run Text="Claudia Hopfl and Grzegorz Banasiak"/><LineBreak/><Run Text="2019"/></TextBlock>
     </Grid>
 </Window>
