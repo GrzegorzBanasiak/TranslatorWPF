@@ -24,5 +24,10 @@ namespace TranslatorWPF
         {
             InitializeComponent();
         }
+
+        private void BtnCheckText_Click(object sender, RoutedEventArgs e)
+        {
+            txtbCheckedLanguage.Text = "Event";
+        }
     }
 }
