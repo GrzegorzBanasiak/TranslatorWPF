@@ -29,15 +29,15 @@
         <TextBlock HorizontalAlignment="Left" Margin="30,174,0,0" TextWrapping="Wrap" Text="Tekst do przetłumaczenia:" VerticalAlignment="Top" Width="262"/>
         <TextBox Name="txtbTextTranslated" HorizontalAlignment="Left" Height="116" Margin="30,356,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="395"/>
         <TextBlock HorizontalAlignment="Left" Margin="30,340,0,0" TextWrapping="Wrap" Text="Tłumaczenie:" VerticalAlignment="Top" Width="262"/>
-        <Button Name="btnTranslate" Content="Translate" HorizontalAlignment="Left" Margin="334,311,0,0" VerticalAlignment="Top" Width="91" Height="25" Background="Blue" Foreground="White" FontWeight="Bold"/>
-        <ComboBox HorizontalAlignment="Left" Margin="198,314,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Content="English" IsSelected="True" HorizontalAlignment="Left" Width="118"/>
-            <ComboBoxItem Content="Polish" HorizontalAlignment="Left" Width="118"/>
-            <ComboBoxItem Content="Italian" HorizontalAlignment="Left" Width="118"/>
-            <ComboBoxItem Content="Spanish" HorizontalAlignment="Left" Width="118"/>
-            <ComboBoxItem Content="French" HorizontalAlignment="Left" Width="118"/>
-            <ComboBoxItem Content="Russian" HorizontalAlignment="Left" Width="118"/>
-            <ComboBoxItem Content="German" HorizontalAlignment="Left" Width="118"/>
+        <Button Name="btnTranslate" Content="Translate" HorizontalAlignment="Left" Margin="334,311,0,0" VerticalAlignment="Top" Width="91" Height="25" Background="Blue" Foreground="White" FontWeight="Bold" Click="BtnTranslate_Click" />
+        <ComboBox Name="cboxLanguageList" HorizontalAlignment="Left" Margin="198,314,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="English" Tag="en" IsSelected="True" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Polish" Tag="pl" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Italian" Tag="it" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Spanish" Tag="es" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="French" Tag="fr" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Russian" Tag="ru" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="German" Tag="de" HorizontalAlignment="Left" Width="118"/>
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="77,477,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Height="34" Width="301"><Run Text="Claudia Hopfl and Grzegorz Banasiak"/><LineBreak/><Run Text="2019"/></TextBlock>
         <TextBlock Name="txtbCheckedLanguage" HorizontalAlignment="Left" Margin="269,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="139"/>
