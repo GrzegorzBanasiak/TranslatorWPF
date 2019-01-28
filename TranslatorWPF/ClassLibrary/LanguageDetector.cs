@@ -11,15 +11,13 @@ namespace TranslatorWPF.ClassLibrary
     class LanguageDetector
     {
         public String TextToDetected { get; set; }
-        private String API_KEY;
-        private String API_LINK_DETECTOR = "https://translate.yandex.net/api/v1.5/tr/detect?key=<APIkey>&text=";
+        private String API_LINK_DETECTOR;
         public String DetectedLanguage { get; set; }
 
         public LanguageDetector(String textToDetected)
         {
-            TextToDetected = HttpUtility.HtmlEncode(textToDetected);
-            API_KEY = Settings.API_KEY;
-            API_LINK_DETECTOR = "https://translate.yandex.net/api/v1.5/tr/detect?key=" + API_KEY + "&text=";
+            TextToDetected = HttpUtility.UrlEncode(textToDetected);
+            API_LINK_DETECTOR = "https://translate.yandex.net/api/v1.5/tr/detect?key=" + Settings.API_KEY + "&text=";
         }
 
         //Publiczna metoda sprawdza język podanego tekstu
