@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TranslatorWPF.ClassLibrary;
 
 namespace TranslatorWPF
 {
@@ -27,7 +28,12 @@ namespace TranslatorWPF
 
         private void BtnCheckText_Click(object sender, RoutedEventArgs e)
         {
-            txtbCheckedLanguage.Text = "Event";
+            String textToDetected = txtbCheckText.Text;
+
+            LanguageDetector lang = new LanguageDetector(textToDetected);
+            lang.Detect(); 
+
+            txtbCheckedLanguage.Text = lang.GetFullNameLanguage();
         }
 
         private void BtnTranslate_Click(object sender, RoutedEventArgs e)
