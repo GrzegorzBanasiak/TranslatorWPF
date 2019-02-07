@@ -19,7 +19,12 @@ namespace TranslatorWPF.ClassLibrary
             API_LINK += Settings.API_KEY;
         }
 
-        //Tlumaczenie tekstu, pobiera tekst do tlumaczenia oraz język na który chcemy przetłumaczyć 
+        /// <summary>
+        /// Translate Text
+        /// </summary>
+        /// <param name="textToTranslate">Text to translate</param>
+        /// <param name="choosenLanguage">Language we want to translate</param>
+        /// <returns>Translated Text</returns>
         public String Translate( String textToTranslate, String choosenLanguage)
         {
             String encodedText = HttpUtility.UrlEncode(textToTranslate);

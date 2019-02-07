@@ -8,8 +8,13 @@ namespace TranslatorWPF.ClassLibrary
 {
     static class TextGetter
     {
-        //Metoda wyciąga tekst z odpowiedzi XML z api 
-        //pobiera tekst, 2 stringi reprezentujace poczatek i koniec pobranego tekstu
+        /// <summary>
+        /// Get text from between two stings
+        /// </summary>
+        /// <param name="strSource">String with text</param>
+        /// <param name="strStart">Behind this text</param>
+        /// <param name="strEnd">Before this text</param>
+        /// <returns>String from strSource</returns>
         public static string GetBetween(string strSource, string strStart, string strEnd)
         {
             int Start, End;
