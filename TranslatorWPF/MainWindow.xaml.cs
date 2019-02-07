@@ -38,9 +38,13 @@ namespace TranslatorWPF
 
         private void BtnTranslate_Click(object sender, RoutedEventArgs e)
         {
+            Translator translator = new Translator();
+
             //Pobierz wartość właściwości Tag wybranego języka z listy rozwijlnej, Tag zawiera skrót języka (np: en -> English)
             string choosenLanguage = ((ComboBoxItem)this.cboxLanguageList.SelectedItem).Tag.ToString();
-            txtbTextTranslated.Text = "Przetlumaczony text z " + choosenLanguage; 
+            string textToTranslate = txtbTextToTranslate.Text;
+
+            txtbTextTranslated.Text = translator.Translate(textToTranslate, choosenLanguage);
         }
     }
 }

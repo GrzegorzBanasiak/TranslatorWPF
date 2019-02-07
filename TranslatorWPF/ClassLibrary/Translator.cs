@@ -13,20 +13,23 @@ namespace TranslatorWPF.ClassLibrary
     {
         private String API_LINK = "https://translate.yandex.net/api/v1.5/tr.json/translate?key="; 
 
+        //Konstruktor
         public Translator()
         {
             API_LINK += Settings.API_KEY;
         }
 
+        //Tlumaczenie tekstu, pobiera tekst do tlumaczenia oraz język na który chcemy przetłumaczyć 
         public String Translate( String textToTranslate, String choosenLanguage)
         {
             String encodedText = HttpUtility.UrlEncode(textToTranslate);
             String link = API_LINK + "&text=" + encodedText + "&lang=" + choosenLanguage;
 
-            Console.WriteLine(TranslateRequest(link));
-            return "sdsa";
+
+            return TranslateRequest(link);
         }
 
+        //Zapytanie do api o przetlumaczenie
         private String TranslateRequest(String url)
         {
             String translatedText = null;
@@ -37,7 +40,7 @@ namespace TranslatorWPF.ClassLibrary
                 Byte[] pageData = client.DownloadData(url);
                 String xmlResponse = Encoding.ASCII.GetString(pageData);
 
-                translatedText = xmlResponse;
+                translatedText = TextGetter.GetBetween(xmlResponse, "text\":[\"", "\"]}"); ;
             }
             catch (WebException webEx)
             {

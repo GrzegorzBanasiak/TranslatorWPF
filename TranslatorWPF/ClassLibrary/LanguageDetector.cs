@@ -43,7 +43,7 @@ namespace TranslatorWPF.ClassLibrary
                 Byte[] pageData = client.DownloadData(API_LINK_DETECTOR + TextDetected);
                 String xmlResponse = Encoding.ASCII.GetString(pageData);
 
-                language = getBetween(xmlResponse, "lang=\"", "\" />");
+                language = TextGetter.GetBetween(xmlResponse, "lang=\"", "\" />");
             }
             catch (WebException webEx)
             {
@@ -55,24 +55,6 @@ namespace TranslatorWPF.ClassLibrary
             }
             
             return language;
-        }
-
-        //Metoda wyciąga skrót z odpowiedzi XML z api 
-        private string getBetween(string strSource, string strStart, string strEnd)
-        {
-            int Start, End;
-
-            if (strSource.Contains(strStart) && strSource.Contains(strEnd))
-            {
-                Start = strSource.IndexOf(strStart, 0) + strStart.Length;
-                End = strSource.IndexOf(strEnd, Start);
-
-                return strSource.Substring(Start, End - Start);
-            }
-            else
-            {
-                return "";
-            }
         }
 
         private String ConvertNameLanguage()
