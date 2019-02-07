@@ -3,10 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TranslatorWPF"
+        xmlns:local="clr-namespace:TranslatorWPF" 
+        Icon="Resources\titleicon.ico"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="Translator 0.1" Height="550" Width="450" Background="WhiteSmoke">
+        Title="Translator 1" Height="550" Width="450" Background="WhiteSmoke">
     <Grid HorizontalAlignment="Right" Width="444" >
         <TextBlock HorizontalAlignment="Left" FontSize="14" Height="35" Margin="20,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="424"><Run Text="1. Sprawdź język wprowadzonego tekstu."/><LineBreak/><Run/></TextBlock>
         <TextBox Name="txtbCheckText" HorizontalAlignment="Left" Height="27" Margin="30,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="288"/>
