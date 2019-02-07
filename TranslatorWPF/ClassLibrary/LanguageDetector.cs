@@ -37,7 +37,11 @@ namespace TranslatorWPF.ClassLibrary
             return ConvertNameLanguage();
         }
 
-        //Metoda wysyła request do api w celu detekcji jezyka, zwraca skrót np "pl"
+        /// <summary>
+        /// Check text's language
+        /// </summary>
+        /// <param name="TextDetected">Text to detected</param>
+        /// <returns>Shortcut language's name</returns>
         private String ApiDetectorStart(String TextDetected)
         {
             String language = null;
@@ -62,6 +66,10 @@ namespace TranslatorWPF.ClassLibrary
             return language;
         }
 
+        /// <summary>
+        /// Convert shortcut language to full name
+        /// </summary>
+        /// <returns>Full name of language</returns>
         private String ConvertNameLanguage()
         {
             switch (DetectedLanguage)

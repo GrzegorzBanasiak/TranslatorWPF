@@ -34,7 +34,11 @@ namespace TranslatorWPF.ClassLibrary
             return TranslateRequest(link);
         }
 
-        //Zapytanie do api o przetlumaczenie
+        /// <summary>
+        /// Send request to api to translate text
+        /// </summary>
+        /// <param name="url">Api url</param>
+        /// <returns>Translated text</returns>
         private String TranslateRequest(String url)
         {
             String translatedText = null;
