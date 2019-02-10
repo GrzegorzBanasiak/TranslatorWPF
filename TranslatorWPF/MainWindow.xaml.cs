@@ -23,6 +23,7 @@ namespace TranslatorWPF
         public MainWindow()
         {
             InitializeComponent();
+            MessageBox.Show("Do poprawnego działania programu wymagane jest:" + Environment.NewLine + "1. Połączenie z internetem" + Environment.NewLine + "2. Poprawne ustawienia zapory systemowek");
         }
 
         private void BtnCheckText_Click(object sender, RoutedEventArgs e)
