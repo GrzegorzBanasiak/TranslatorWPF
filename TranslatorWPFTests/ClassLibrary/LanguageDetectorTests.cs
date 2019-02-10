@@ -8,6 +8,32 @@ namespace TranslatorWPF.Tests
     public class LanguageDetectorTests
     {
         [TestMethod]
+        public void DetectTest()
+        {
+            LanguageDetector lang = new LanguageDetector("I have a dog");
+            String expected = "en";
+            String actual;
+
+            lang.Detect();
+            actual = lang.DetectedLanguage;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void DetectAreNotEqualTest()
+        {
+            LanguageDetector lang = new LanguageDetector("I have a dog");
+            String expected = "pl";
+            String actual;
+
+            lang.Detect();
+            actual = lang.DetectedLanguage;
+
+            Assert.AreNotEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void GetFullNameLanguageTest()
         {
             LanguageDetector lang = new LanguageDetector("siemano")
