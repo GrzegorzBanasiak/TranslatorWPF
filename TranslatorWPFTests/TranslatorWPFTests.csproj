@@ -57,6 +57,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ClassLibrary\TextGetterTests.cs" />
+    <Compile Include="ClassLibrary\SettingsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

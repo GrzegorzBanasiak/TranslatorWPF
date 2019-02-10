@@ -109,9 +109,7 @@
   <ItemGroup>
     <Resource Include="Resources\titleicon.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ClassLibraryTests\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
