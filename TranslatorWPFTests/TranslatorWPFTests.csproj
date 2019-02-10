@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="ClassLibrary\TextGetterTests.cs" />
     <Compile Include="ClassLibrary\SettingsTests.cs" />
+    <Compile Include="ClassLibrary\TranslatorTests.cs" />
+    <Compile Include="ClassLibrary\LanguageDetectorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
