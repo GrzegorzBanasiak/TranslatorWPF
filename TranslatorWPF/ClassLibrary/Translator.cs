@@ -7,7 +7,7 @@ using System.Net;
 using System.Web;
 
 
-namespace TranslatorWPF.ClassLibrary
+namespace TranslatorWPF
 {
     class Translator
     {

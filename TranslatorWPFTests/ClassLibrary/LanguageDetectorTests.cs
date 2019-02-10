@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TranslatorWPF;
 
 namespace TranslatorWPFTests.ClassLibrary
 {
@@ -7,8 +8,33 @@ namespace TranslatorWPFTests.ClassLibrary
     public class LanguageDetectorTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void GetFullNameLanguageTest()
         {
+            LanguageDetector lang = new LanguageDetector("siemano")
+            {
+                DetectedLanguage = "pl"
+            };
+            String expected = "Polish";
+            String actual;
+
+            actual = lang.GetFullNameLanguage();
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GetFullNameLanguageAreNotEqualTest()
+        {
+            LanguageDetector lang = new LanguageDetector("siemano")
+            {
+                DetectedLanguage = "pl"
+            };
+            String expected = "English";
+            String actual;
+
+            actual = lang.GetFullNameLanguage();
+
+            Assert.AreNotEqual(expected, actual);
         }
     }
 }

@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace TranslatorWPF.ClassLibrary
+namespace TranslatorWPF
 {
-    class LanguageDetector
+    public class LanguageDetector
     {
         public String TextToDetected { get; set; }
         private String API_LINK_DETECTOR;
