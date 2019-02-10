@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TranslatorWPF.ClassLibrary
+namespace TranslatorWPF
 {
-    static class TextGetter
+    public static class TextGetter
     {
         /// <summary>
         /// Get text from between two stings
