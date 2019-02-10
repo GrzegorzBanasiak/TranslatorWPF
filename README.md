@@ -35,3 +35,8 @@ a wszelkie "resources" pochodzą z strony:
 * Dokumentacja oraz przejrzystość kodu
 
 a jako kanał komunikacji wybraliśmy chat video.
+
+## FAQ
+
+* #### Wymagane połączenie z internetem do poprawnego działania programu.
+* #### Poprawne działanie programu mogą zakłócić ustawienia zapory systemowej. 
