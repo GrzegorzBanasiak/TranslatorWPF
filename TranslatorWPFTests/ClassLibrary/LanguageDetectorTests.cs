@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TranslatorWPF;
 
-namespace TranslatorWPFTests.ClassLibrary
+namespace TranslatorWPF.Tests
 {
     [TestClass]
     public class LanguageDetectorTests

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace TranslatorWPFTests.ClassLibrary
+namespace TranslatorWPF.Tests
 {
     [TestClass]
     public class TranslatorTests
