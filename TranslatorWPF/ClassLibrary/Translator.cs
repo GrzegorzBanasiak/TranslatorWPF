@@ -6,7 +6,7 @@ using System.Web;
 
 namespace TranslatorWPF
 {
-    class Translator
+    public class Translator
     {
         private String API_LINK = "https://translate.yandex.net/api/v1.5/tr.json/translate?key="; 
 

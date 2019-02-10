@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TranslatorWPF;
 
 namespace TranslatorWPF.Tests
 {
@@ -7,8 +8,27 @@ namespace TranslatorWPF.Tests
     public class TranslatorTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TranslateTest()
         {
+            Translator tran = new Translator();
+            String expected = "kot";
+            String actual;
+
+            actual = tran.Translate("cat", "pl");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void TranslateAreNotEqualTest()
+        {
+            Translator tran = new Translator();
+            String expected = "kot";
+            String actual;
+
+            actual = tran.Translate("cat", "it");
+
+            Assert.AreNotEqual(expected, actual);
         }
     }
 }
